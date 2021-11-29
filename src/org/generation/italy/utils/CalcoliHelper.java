@@ -43,11 +43,15 @@ public class CalcoliHelper {
 		 } return a;
 			
     }
-		
 	
-		
-//	public static double valoreAssoluto(double a, double b) {}
 	
+	public static double valoreAssoluto(double a) {
+		 if(a < 0) {
+			 a = a *-1;			 
+		 } return a;
+			
+    }
+				
 	
 	
 	///////VALORE MINIMO///////
@@ -83,7 +87,20 @@ public class CalcoliHelper {
 	
 	///////BONUS POTENZA///////
 	
-	
+	public static int potenza(int a, int b) {
+		int risultato = 1;
+		if(a > 0 && b <=0) {
+			return risultato;
+		}else if(a <= 0 && b >=1) {
+			return 0;
+		}else {
+			for(int i = 1; i <= b; i++) {
+				risultato = risultato * a;		
+			}
+			return risultato;
+		}
+		
+	}
 	
 	
 }
